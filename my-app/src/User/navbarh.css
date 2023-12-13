@@ -1,0 +1,179 @@
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: hsl(0, 0%, 100%);
+    width: 100%;
+    top: 1px;
+    padding: 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.342);
+
+}
+
+.logo {
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    font-size: 36px;
+    color: rgba(15, 86, 128, 0.864);
+    transform: translate(2px);
+}
+
+.profileImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        background: rgb(237, 222, 222);
+        height: max-content;
+        width: 80%;
+        border-radius: 1rem;
+        top: -500rem;
+        left: 50%;
+        padding: 1rem;
+        transform: translate(-50%);
+        z-index: 2000;
+        box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+        transition: .5s ease-in-out;
+    }
+
+    .navlists {
+        flex-direction: column;
+        justify-content: center;
+        list-style-type: none;
+        width: 100%;
+        margin: auto;
+        padding: .5rem 0;
+
+    }
+
+    .navItem {
+        padding: .5rem 0;
+
+    }
+
+    .profileImage {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .navLink {
+        color: hsl(240, 4%, 36%);
+        font-size: .9rem;
+        font-weight: 600;
+
+        &:hover {
+            color: hsl(199, 100%, 33%)
+        }
+    }
+
+}
+
+.btn {
+    margin-top: 1rem;
+
+    a {
+        font-weight: 600;
+        color: hsl(0, 0%, 100%);
+    }
+}
+
+.closeNavbar {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: hsl(199, 100%, 33%);
+
+    &:hover {
+        color: hsl(187, 85%, 43%);
+    }
+}
+
+.activeNavbar {
+    top: 7rem;
+
+}
+
+
+.toggleNavbar {
+    .icon {
+        font-size: 25px;
+        color: hsl(199, 100%, 33%);
+
+    }
+
+    &:hover.icon {
+        color: hsl(187, 85%, 43%);
+
+    }
+
+}
+
+
+@media screen and (min-width:769px) {
+
+    .toogleNavbar,
+    .closeNavbar {
+        display: none;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    .navlists {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        flex-direction: row;
+    }
+
+    .navLink {
+        color: hsl(240, 4%, 36%);
+        padding: 0 0.45rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+
+        &:hover {
+            color: hsl(199, 100%, 33%);
+        }
+
+    }
+
+}
+
+
+.btn {
+    margin-left: 1rem;
+
+    a {
+        color: hsl(0, 0%, 100%);
+        font-weight: 600;
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width: 1240px) {
+    .header {
+        padding: 1rem 8.5rem;
+    }
+}
